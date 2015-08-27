@@ -1,0 +1,45 @@
+.inlarge {
+	cursor: pointer;
+}
+#inlarge-container {
+	background-color: #000;
+	background-color: rgba(0, 0, 0, .8);
+	display: none;
+	height: 100%;
+	left: 0;
+	overflow: auto;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+}
+#inlarge-close {
+	color: #fff;
+	font-size: 20px;
+	font-family: Helvetica, Arial, Verdana;
+	position: fixed;
+	right: 12px;
+	text-decoration: none;
+	top: 10px;
+	z-index: 1001;
+}
+#inlarge-wrapper {
+	display: table;
+	height: 100%;
+	table-layout: fixed;
+	width: 100%;
+}
+#inlarge-inside {
+	display: table-cell;
+	height: 100%;
+	vertical-align: middle;
+}
+#inlarge-inside img,
+#inlarge-inside iframe {
+	display: block;
+	margin: 0 auto;
+	max-height: 100%;
+}
+#inlarge-inside iframe {
+	width: 100%;
+}

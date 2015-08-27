@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="author" content="Justin Armstrong">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>inLarge.js</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+
+<body>
+
+<img class="inlarge" src="http://placehold.it/350x150?text=Normal+Image">
+<img class="inlarge" data-large="http://placehold.it/1600x800?text=This+Is+Large!" src="http://placehold.it/350x150?text=Large+Image">
+<img class="inlarge" data-mobile="http://placehold.it/700x300?text=Mobile+Eyes+Only" src="http://placehold.it/350x150?text=Normal+and+Mobile">
+<img class="inlarge" data-large="http://placehold.it/1600x800?text=This+Is+Large!" data-mobile="http://placehold.it/700x300?text=Mobile+Eyes+Only" src="http://placehold.it/350x150?text=Large+and+Mobile">
+<img class="inlarge" data-iframe="http://justinarmstrongcreative.com" src="http://placehold.it/350x150?text=Iframe">
+<img class="inlarge" data-iframe="https://www.youtube.com/embed/Hv_DRJZZ2qI" src="http://placehold.it/350x150?text=YouTube">
+<img class="inlarge" data-iframe="https://player.vimeo.com/video/61483000" src="http://placehold.it/350x150?text=Vimeo">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../inLarge.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('.inlarge').inLarge({
+	    speed : 500,
+	    autoplay : true
+	});
+});
+</script>
+
+</body>
+</html>
