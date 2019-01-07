@@ -6,7 +6,8 @@
         var settings = $.extend({
             speed : 1000,
             autoplay : false,
-	    	max_width : '100%',
+			max_width : '100%',
+			percentage_width: false,
 	    	esc_close : true
         }, options);
 
@@ -23,6 +24,9 @@
 			    }
 			});
 		}
+
+		 //create percent sign to be used for concatenation
+		 settings.percentage_width = settings.percentage_width ? '%' : 0;
 
 		// Add inLarge divs to body
         $('body').append('<div id="inlarge-container"><a id="inlarge-close" href="javascript:;">X</a><div id="inlarge-wrapper"><div id="inlarge-inside"></div></div></div>');
@@ -65,7 +69,7 @@
 				// Max-width
 		    	var max_width_str = settings.max_width.replace(/\D/g,'');
 				if(max_width_str < window_width) {
-					$('#inlarge-inside iframe, #inlarge-inside img').css('max-width', settings.max_width); // Max-width
+					$('#inlarge-inside iframe, #inlarge-inside img').css('max-width', parseInt(settings.max_width) + settings.percentage_width); // Max-width
 				} else {
 					$('#inlarge-inside iframe, #inlarge-inside img').css('max-width', '100%'); // Max-width
 				}
